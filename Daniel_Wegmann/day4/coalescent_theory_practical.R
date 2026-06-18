@@ -166,3 +166,13 @@ mean(unlist(lapply(trees, function(x){ max(branching.times(x)) })))
 # pop size 100 = 0.2
 # this is explained by the fact that the average tree height is
 # proportional to the effective population size and the mutation rate.
+
+# Explaining the populations with no mutation: 
+# The topologies are independent of the population size and should not be visually different 
+# between simulations conducted with a small or large population size. 
+# The expected average tree height, however, should be affected by population size. 
+# It is 4*N* where *N* is the number of diploid individuals. 
+# The `Deme size` specified in `fastsimocal2`, however, is in the number of haploid individuals 
+# and hence twice that of the number of diploid individuals. 
+# The expected tree height should therefore match twice the number of haploid individuals.
+
